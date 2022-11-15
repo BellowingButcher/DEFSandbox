@@ -19,3 +19,4 @@ class TodoAPIView(APIView):
 
         else:
             data = Todo.objects.all()
+            serializer = TodoSerializer(data, many=True)
